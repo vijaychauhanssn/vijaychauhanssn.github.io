@@ -8,7 +8,9 @@ $(".slider1")
   .on("init", (slick) => {
     setBgImage($(slick.target).find(".slick-active"));
   })
-  .slick()
+  .slick({
+	  autoplay:true,
+  })
   .on("beforeChange", (event, slick, currentSlide, nextSlide) => {
     setBgImage(slick.$slider.find(`[data-slick-index=${nextSlide}]`));
   });
@@ -23,7 +25,9 @@ $(".slider2")
   .on("init", (slick) => {
     setColor($(slick.target).find(".slick-active"));
   })
-  .slick()
+  .slick({
+	  autoplay:true
+  })
   .on("beforeChange", (event, slick, currentSlide, nextSlide) => {
     setColor(slick.$slider.find(`[data-slick-index=${nextSlide}]`));
   });
